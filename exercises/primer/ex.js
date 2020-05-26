@@ -1,7 +1,19 @@
 // TODO: define addFavoriteBook(..) function
 
-// TODO: define printFavoriteBooks() function
+function addFavoriteBook(bookName) {
+  if (!bookName.includes("Great")) {
+    favoriteBooks.push(bookName);
+  }
+}
 
+// TODO: define printFavoriteBooks() function
+function printFavoriteBooks() {
+  console.log(`Favorite Books: ${favoriteBooks.length}`);
+
+  for (let eachBook of favoriteBooks) {
+    console.log(eachBook);
+  }
+}
 var favoriteBooks = [];
 
 addFavoriteBook("A Song of Ice and Fire");
@@ -11,3 +23,5 @@ addFavoriteBook("Great Expectations");
 addFavoriteBook("You Don't Know JS");
 
 // TODO: print out favorite books
+
+printFavoriteBooks();
